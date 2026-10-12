@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A clean, modern messaging dashboard inspired by a friendly chat app."
+    />
+    <title>Chatly — Messages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="rail" aria-label="Main navigation">
+        <a class="brand" href="#" aria-label="Chatly home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M23.9 5.5C13.7 5.5 5.5 13.4 5.5 23.2c0 4.2 1.5 8.1 4.1 11.1L7.8 42l8.1-2.1c2.4 1.1 5.1 1.7 8 1.7 10.2 0 18.4-7.9 18.4-17.7S34.1 5.5 23.9 5.5Z" fill="#2E9DF0"/>
+              <path d="M16.2 26.5c-2 0-3.6-1.6-3.6-3.6 0-7.3 6.1-13.2 13.6-13.2 5.2 0 9.8 2.8 12.1 7-2.1-.9-4.5-1.4-7-1.4-7.6 0-13.9 4.8-15.1 11.2Z" fill="#72D2F5"/>
+              <path d="M12.8 30.4c3.2 4.1 8.8 6.5 14.7 5.6 6.6-1 11.6-6 12.1-12.1.2 1 .4 2 .4 3.1 0 8.2-7 14.9-15.7 14.9-3.3 0-6.3-1-8.8-2.7l-5.6 1.5 1.5-5.5c-1.3-1.4-2.3-3-2.9-4.8 1.3.2 2.8.2 4.3 0Z" fill="#1685DB"/>
+              <path d="M18.1 29.6c5.4 0 10.1-3.1 12-7.5 1.5 1.8 3.7 3 6.3 3 1.2 0 2.4-.3 3.4-.7-.6 6-5.8 11-12.6 11.4-3.7.2-7.1-1-9.5-3.2l.4-3Z" fill="#9DE5FA"/>
+            </svg>
+          </span>
+        </a>
+
+        <button class="rail-avatar" aria-label="Open Josephin's profile">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=85"
+            alt=""
+          />
+          <span class="online-indicator"></span>
+        </button>
+
+        <div class="rail-bottom">
+          <button class="icon-button" aria-label="Toggle dark mode">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 15.4A8.5 8.5 0 0 1 8.6 3.9 8.5 8.5 0 1 0 20.1 15.4Z"/></svg>
+          </button>
+          <button class="icon-button" aria-label="Sign out">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v9m6.4-5.4a8 8 0 1 1-12.8 0"/></svg>
+          </button>
+        </div>
+      </aside>
+
+      <aside class="inbox" aria-label="Chats">
+        <section class="recent-section">
+          <div class="section-heading">
+            <div>
+              <h1>Recent</h1>
+              <p>Chat from your friends <span aria-label="kiss"></span></p>
+            </div>
+            <button class="icon-button subtle" aria-label="Show recent chats in a grid">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            </button>
+          </div>
+
+          <div class="stories">
+            <a class="story story-one" href="#" aria-label="Open Jpny's story">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&h=340&q=85" alt="" />
+              <span class="story-name">Jpny</span>
+              <span class="story-dot yellow"></span>
+            </a>
+            <a class="story story-two" href="#" aria-label="Open John Deo's story">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&h=340&q=85" alt="" />
+              <span class="story-name">John Deo</span>
+              <span class="story-dot red"></span>
+            </a>
+          </div>
+        </section>
+
+        <section class="chats-section">
+          <div class="section-heading chat-heading">
+            <div>
+              <h2>Chat</h2>
+              <p>Start New Conversation</p>
+            </div>
+            <button class="icon-button subtle" aria-label="Search chats">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4 4"/></svg>
+            </button>
+          </div>
+
+          <div class="filter-tabs" role="tablist" aria-label="Conversation type">
+            <button class="filter-tab active" role="tab" aria-selected="true">Chat</button>
+            <button class="filter-tab" role="tab" aria-selected="false">Call</button>
+            <button class="filter-tab" role="tab" aria-selected="false">Contact</button>
+          </div>
+
+          <button class="conversation active-conversation">
+            <span class="conversation-avatar">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=85" alt="" />
+              <span class="status-dot away"></span>
+            </span>
+            <span class="conversation-copy">
+              <span class="conversation-name">Josephin water</span>
+              <span class="conversation-preview">Hi, i am josephin. How are you....</span>
+            </span>
+            <span class="conversation-meta">
+              <time datetime="2023-10-22">22/10/23</time>
+              <span class="seen">Seen</span>
+            </span>
+          </button>
+        </section>
+      </aside>
+
+      <section class="chat-panel" aria-label="Conversation with Josephin water">
+        <header class="chat-header">
+          <div class="header-person">
+            <span class="header-avatar">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=85" alt="" />
+              <span class="online-indicator"></span>
+            </span>
+            <div class="person-details">
+              <strong>Josephin water</strong>
+              <span class="active-pill">Active</span>
+            </div>
+          </div>
+          <span class="header-divider"></span>
+          <div class="header-tools">
+            <button class="icon-button subtle" aria-label="Voice settings">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7m2.5-10a9 9 0 0 1 0 13"/></svg>
+            </button>
+            <button class="icon-button subtle" aria-label="Search this conversation">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4 4"/></svg>
+            </button>
+          </div>
+          <div class="header-actions">
+            <button class="icon-button subtle" aria-label="Start a voice call">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 3a14 14 0 0 1-7-7l3-2-2-5Z"/></svg>
+            </button>
+            <button class="icon-button subtle" aria-label="Start a video call">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>
+            </button>
+            <button class="icon-button subtle" aria-label="Conversation details">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            </button>
+            <button class="more-button" aria-label="More options">⋮</button>
+          </div>
+        </header>
+
+        <div class="messages">
+          <div class="message-row outgoing">
+            <div class="message-content">
+              <div class="message-byline"><strong>Alan joseph</strong><time>01:40 AM</time></div>
+              <p class="bubble outgoing-bubble">Hi I am Alan,</p>
+              <p class="bubble outgoing-bubble">your personal assistant to help you</p>
+            </div>
+            <img class="message-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=85" alt="Alan joseph" />
+          </div>
+
+          <div class="message-row incoming">
+            <img class="message-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=85" alt="Josephin water" />
+            <div class="message-content">
+              <div class="message-byline"><strong>Josephin water</strong><time>01:35 AM</time></div>
+              <p class="bubble incoming-bubble">Hi I am Josephin, can you help me to find best chat app?.</p>
+              <div class="message-with-reaction">
+                <p class="bubble incoming-bubble">it should from elite auther</p>
+                <span class="reaction" aria-label="Reaction">R</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="composer" action="#" onsubmit="return false">
+          <button class="add-button" type="button" aria-label="Add attachment">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="composer-tools">
+            <button class="tool-button" type="button" aria-label="Choose a sticker">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v11l-5 5H5V4Z"/><path d="M14 20v-5h5M8 8h8M8 11h5"/><circle cx="8" cy="16" r="1"/></svg>
+            </button>
+            <button class="tool-button" type="button" aria-label="Add emoji">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M9 14s1 2 3 2 3-2 3-2M9 9h.01M15 9h.01"/></svg>
+            </button>
+            <button class="tool-button" type="button" aria-label="More attachments">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+          <label class="message-input">
+            <span class="sr-only">Write your message</span>
+            <input type="text" placeholder="Write your message..." />
+          </label>
+          <div class="send-tools">
+            <button class="tool-button mic-button" type="button" aria-label="Record a voice message">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0m-7 7v3m-4 0h8"/></svg>
+            </button>
+            <button class="send-button" type="submit" aria-label="Send message">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 3-7.2 18-3.2-7.6L3 10.2 21 3Z"/><path d="m10.6 13.4 4.2-4.2"/></svg>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
